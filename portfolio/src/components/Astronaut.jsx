@@ -26,6 +26,7 @@ export function Astronaut(props) {
                 material={materials['AstronautFallingTexture.png']}
                 skeleton={nodes.Cube001_0.skeleton}
               />
+              {/* text */}
               <skinnedMesh
                 name="Cube005_0"
                 geometry={nodes.Cube005_0.geometry}

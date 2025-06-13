@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo, useCallback } from "react";
 import Project from "../components/Project";
 import { myProjects } from "../constants";
 import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
@@ -8,24 +8,40 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const sectionRef = useRef(null);
   
-  // Mouse follower animation
+  // Memoize categories to prevent recalculation on every render
+  const categories = useMemo(() => 
+    ["all", ...new Set(myProjects.flatMap(project => project.categories || []))], 
+    []
+  );
+
+  // Memoize filtered projects to prevent recalculation when dependencies haven't changed
+  const filteredProjects = useMemo(() => 
+    activeCategory === "all" 
+      ? myProjects 
+      : myProjects.filter(project => project.categories?.includes(activeCategory)),
+    [activeCategory]
+  );
+
+  // Mouse follower animation - optimized with useCallback
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { damping: 15, stiffness: 100 });
   const springY = useSpring(y, { damping: 15, stiffness: 100 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = useCallback((e) => {
     x.set(e.clientX + 20);
     y.set(e.clientY + 20);
-  };
+  }, [x, y]);
 
-  // Filter projects by category
-  const filteredProjects = activeCategory === "all" 
-    ? myProjects 
-    : myProjects.filter(project => project.categories?.includes(activeCategory));
-
-  // Get unique categories
-  const categories = ["all", ...new Set(myProjects.flatMap(project => project.categories || []))];
+  // Memoize category button styles to prevent recreation on each render
+  const getCategoryButtonClass = useCallback((category) => 
+    `px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+      activeCategory === category
+        ? "bg-indigo-600 text-white"
+        : "bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
+    }`,
+    [activeCategory]
+  );
 
   return (
     <section
@@ -49,11 +65,7 @@ const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeCategory === category
-                  ? "bg-indigo-600 text-white"
-                  : "bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
-              }`}
+              className={getCategoryButtonClass(category)}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
@@ -86,6 +98,7 @@ const Projects = () => {
               src={preview}
               className="w-full h-full object-cover rounded-lg shadow-xl border border-gray-200 dark:border-gray-700"
               alt="Project preview"
+              loading="lazy" // Add lazy loading for better performance
             />
           </motion.div>
         )}

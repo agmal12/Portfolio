@@ -1,60 +1,60 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Apartment Management System",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "An Apartment Management System website helps manage apartment-related tasks like tenant information, rent payments, maintenance requests, and vacancy tracking in a simple and organized way.",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "The Apartment Management System website is designed to simplify the daily operations of apartment complexes for both owners and tenants",
+      "With an easy-to-use interface, the system enhances communication between residents and management.",
+      "The frontend of the website is developed using HTML and CSS, making it clean and user-friendly.",
+      "Users can update rental status or submit service complaints through the website.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/Domus.png",
     tags: [
       {
         id: 1,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        name: "HTML5",
+        path: "/assets/logos/html5.svg",
       },
       {
         id: 2,
-        name: ".Net",
-        path: "/assets/logos/dotnet.svg",
+        name: "CSS3",
+        path: "/assets/logos/css3.svg",
       },
       {
         id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
+        name: "node.js",
+        path: "/assets/logos/nodejs.png",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "mongoDB",
+        path: "/assets/logos/mongodb.png",
       },
     ],
   },
   {
     id: 2,
-    title: "Authentication & Authorization System",
+    title: "Health Administration Platform",
     description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+      "Health Administration Platform is a comprehensive digital system designed to streamline and manage healthcare operations, including patient records, appointments, billing, and administrative workflows, to enhance efficiency and quality of care.",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "It centralizes critical healthcare operations into a single, easy-to-use interface.",
+      "With built-in automation and secure data handling, it reduces administrative workload and minimizes errors.",
+      "I have completed the frontend of the Health Administration Platform using React and TailwindCSS, ensuring a responsive and modern user interface",
+      "Its scalable architecture makes it suitable for clinics, hospitals, and multi-facility healthcare networks.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/agam1.png",
     tags: [
       {
         id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
+        name: "MongoDB",
+        path: "/assets/logos/mongodb.png",
       },
       {
         id: 2,
@@ -63,8 +63,8 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        name: "Python",
+        path: "/assets/logos/python.png",
       },
       {
         id: 4,
@@ -75,153 +75,48 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: "Blazor Web App",
+    title: "Football Analytics",
     description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+      "Football analytics uses statistics, tracking data, and AI to uncover insights on player performance, tactics, and team efficiency.",
     subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
+      "It combines player statistics, tracking technology, and machine learning to reveal patterns in performance, fitness, and tactics.",
+      "Beyond the pitch, it also enhances fan engagement, betting models, and broadcast insights.",
+      "The backend leverages YOLO (You Only Look Once) and OpenCV for real-time player detection, tracking, and event recognition (e.g., passes, shots) from match footage.",
+      "The frontend, built with React and Tailwind CSS, delivers an intuitive dashboard visualizing analytics.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/football.png",
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "opencv",
+        path: "/assets/logos/opencv.png",
       },
       {
         id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
+        name: "Yolo",
+        path: "/assets/logos/yolo.png",
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        name: "react",
+        path: "/assets/logos/react.svg",
       },
       {
         id: 4,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
       },
-    ],
-  },
-  {
-    id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
-    tags: [
       {
-        id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
-      },
-      {
-        id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
-      },
-      {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
-      },
-      {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
+        id: 5,
+        name: "Python",
+        path: "/assets/logos/python.png",
       },
     ],
   },
-  {
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
-      },
-      {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
-      },
-      {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-];
+ 
+ ];
 
 export const mySocials = [
   {
